@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // if we select the older version of EcmaScript,the output will be compatible with older browsers but the file size will be larger because the output will include polyfills, so we use the middle ground, ES2020, so efficiency and compatibility are balanced
+    "useDefineForClassFields": true, // search defineProperty mozilla in google
+    "module": "ESNext", // tells typescript to output javascript code that uses the latest module syntax (import and export), also known as ES modules (ESM)
+    // require('./myModule');
+    // import { myFunction } from './myModule';
+    "lib": ["ESNext", "DOM", "DOM.Iterable"], // type definitions
+    "skipLibCheck": true, //controls whether TypeScript should skip type checking for declaration files (*.d.ts), which are files that contain type definitions for libraries and modules.
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true, // allows importing TypeScript files without specifying the extension
+    // import { myFunction } from './myModule';
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*"]
+}
