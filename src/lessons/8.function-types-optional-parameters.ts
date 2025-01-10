@@ -13,7 +13,7 @@ function printNameAndAge2(name: string, options?: { debugMode: boolean }) {
 
 printNameAndAge2('John'); // no error
 printNameAndAge2('John', { debugMode: true }); // no error
-printNameAndAge2('John', {}); // no error
+printNameAndAge2('John', {}); // error
 
 function printNameAndAge3(name: string, options?: { debugMode?: boolean }) {
   console.log(name, options);
